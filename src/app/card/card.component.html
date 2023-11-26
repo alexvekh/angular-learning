@@ -1,4 +1,18 @@
 <div class="card">
-  <h2>Card Component</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, itaque.</p>
+  <h2>{{title}}</h2>
+  <p>{{text}}</p>
+  <strong>Number: {{number}}</strong> <br />
+  <em>Array: {{array}}</em>
+  <pre>{{ obj }}</pre>
+  <p>{{getInfo()}}</p>
+
+  <div>
+    <!-- <img src="{{imgUrl}}"> //working -->
+    <!-- binding -->
+    <img [src]="imgUrl"> 
+    <br />
+    <button [disabled]="disabled">Eanble</button>
+
+  </div>
+  
 </div>
