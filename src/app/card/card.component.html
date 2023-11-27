@@ -1,18 +1,18 @@
 <div class="card">
   <h2>{{title}}</h2>
   <p>{{text}}</p>
-  <strong>Number: {{number}}</strong> <br />
-  <em>Array: {{array}}</em>
-  <pre>{{ obj }}</pre>
-  <p>{{getInfo()}}</p>
+
+  <div class="buttons">
+    <button (click)="changeTitle()">Change title</button>
+    <button (click)="title = 'inline title'">Change title inline</button>
+  </div>
 
   <div>
-    <!-- <img src="{{imgUrl}}"> //working -->
-    <!-- binding -->
-    <img [src]="imgUrl"> 
-    <br />
-    <button [disabled]="disabled">Eanble</button>
-
+    <input type="text" (input)="inputHandler($event)" [value]="title">
   </div>
+
+
+
+
   
 </div>
