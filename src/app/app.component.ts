@@ -15,4 +15,10 @@ import { FormComponent } from './form/form.component';
 })
 export class AppComponent {
   title = 'angular-lerning';
+
+  toggle = true
+
+  toggleCards()  {
+    this.toggle = !this.toggle
+  }
 }
