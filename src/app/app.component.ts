@@ -6,6 +6,11 @@ import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
 
 
+export interface Card {
+  title: string,
+  text: string
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,6 +22,12 @@ export class AppComponent {
   title = 'angular-lerning';
 
   toggle = true
+
+  cards: Card[] = [
+    {title: "First Card", text: "This is card number 1"},
+    {title: "Second Card", text: "This is card #2"},
+    {title: "Last Card", text: "This is card number 3"},
+  ]
 
   toggleCards()  {
     this.toggle = !this.toggle

@@ -1,7 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { NgStyle } from "@angular/common";
 import { NgClass } from "@angular/common";
+import { Card } from "../app.component";
 
 
 @Component({
@@ -13,6 +14,9 @@ import { NgClass } from "@angular/common";
 })
 
 export class CardComponent implements OnInit {
+
+  @Input()
+  card!: Card; 
   title = "My Card Tittle"
   text = "My simple text"
 
@@ -22,7 +26,7 @@ export class CardComponent implements OnInit {
   }
   
   changeTitle() {
-    this.title = "Title has been changed!"
+    this.card.title = "Title has been changed!"
   }
 
   changeHandler() {
