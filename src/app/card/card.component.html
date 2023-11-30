@@ -22,6 +22,10 @@
   </div>
 
   <div>
+    <strong>{{ cardDate | date:'dd MMMM, yyyy HH:mm':'ua' }}</strong>
+  </div>
+
+  <div>
     <input type="text" [(ngModel)]="card.title" (ngModelChange)="changeHandler()">
   </div>
 </div>
