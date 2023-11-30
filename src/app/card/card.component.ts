@@ -16,7 +16,9 @@ import { Card } from "../app.component";
 export class CardComponent implements OnInit {
 
   @Input()
-  card!: Card; 
+  card!: Card;
+  @Input() index!: number
+  
   title = "My Card Tittle"
   text = "My simple text"
 
