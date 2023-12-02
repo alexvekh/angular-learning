@@ -1,0 +1,57 @@
+.card {
+  padding: .5rem 1rem;
+  border: 1px dashed #ccc;
+  margin-bottom: 1rem;
+  align-items: center;
+  display: grid;
+  align-content: center;
+}
+
+.product__title {
+  justify-self: center;
+}
+
+.product__image {
+  width: 200px;
+  justify-self: center;
+}
+
+.product__price {
+  justify-self: center;
+}
+
+.product__price-number {
+  font-weight: 700;
+}
+.product__button {
+  width: 200px;
+  height: 50px;
+  background: orange;
+  border: none;
+  border-radius: 5px;
+
+  justify-self: center;
+}
+
+
+h2 {
+  margin-bottom: .5rem;
+}
+
+.buttons {
+  margin-bottom: .5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+
+  &.red {
+    color: red;
+  }
+  &.blue {
+    color: blue;
+  }
+  &.green {
+    color: green;
+  }
+}
