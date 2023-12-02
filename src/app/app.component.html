@@ -7,6 +7,8 @@
   <hr />
   <div *ngIf="toggle; else noCards">
     <app-form></app-form>
+    <app-product [product]="products[0]">
+    </app-product>
 
     <app-card
       *ngFor="let iterCard of cards; let idx = index"
