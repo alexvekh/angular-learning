@@ -20,7 +20,7 @@
   justify-self: center;
 }
 
-.product__price-number {
+.bold {
   font-weight: 700;
 }
 .product__button {
@@ -29,8 +29,12 @@
   background: orange;
   border: none;
   border-radius: 5px;
-
   justify-self: center;
+}
+
+.bg-blue
+{
+  background-color: rgba(0, 0, 255, 0.31);
 }
 
 
