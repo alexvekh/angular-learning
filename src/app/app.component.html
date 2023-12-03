@@ -7,7 +7,7 @@
   <hr />
   <div *ngIf="toggle; else noCards">
     <app-form></app-form>
-    <app-product [product]="products[0]">
+    <app-product *ngFor="let product of products" [product]="product" >
     </app-product>
 
     <app-card

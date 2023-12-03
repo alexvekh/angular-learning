@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
 import { products as data } from './data/products';
@@ -44,10 +44,11 @@ export class AppComponent implements OnInit {
 
   products: IProduct[] = [];
 
-  constructor(private productsService: ProductsService) {  }
+  constructor(private productsService: ProductsService) {
+  }
 
   ngOnInit(): void {
-    this.productsService.getAll().subscribe(products => {this.products = products})
+    this.productsService.getAll().subscribe(products => console.log(products))
   }
 
   toggleCards()  {
