@@ -7,6 +7,8 @@
   <hr />
   <div *ngIf="toggle; else noCards">
     <app-form></app-form>
+
+    <p *ngIf="loading" class="load">Loading...</p> 
     <app-product *ngFor="let product of products" [product]="product" >
     </app-product>
 

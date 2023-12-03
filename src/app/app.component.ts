@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-
 import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
-import { products as data } from './data/products';
+//import { products as data } from './data/products';
 import { ProductsService } from './services/products.service';
 
 
@@ -27,6 +26,7 @@ export interface Card {
     FormComponent, 
     HttpClientModule,
   ],
+  providers: [ProductsService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -43,11 +43,16 @@ export class AppComponent implements OnInit {
   ]
 
   products: IProduct[] = [];
+  loading = false
 
   constructor(private productsService: ProductsService) {  }
 
   ngOnInit(): void {
-    this.productsService.getAll().subscribe(products => {this.products = products})
+    this.loading = true
+    this.productsService.getAll().subscribe(
+      products => {this.products = products
+      this.loading = false
+      })
   }
 
   toggleCards()  {
