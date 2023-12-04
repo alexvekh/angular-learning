@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
 //import { products as data } from './data/products';
 import { ProductsService } from './services/products.service';
+import { Observable, tap } from 'rxjs';
 
 
 export interface Card {
@@ -42,17 +43,20 @@ export class AppComponent implements OnInit {
     {title: "Last Card", text: "This is card number 3"},
   ]
 
-  products: IProduct[] = [];
+  //products: IProduct[] = [];
   loading = false
+  products$!: Observable<IProduct[]>;
 
   constructor(private productsService: ProductsService) {  }
 
   ngOnInit(): void {
     this.loading = true
-    this.productsService.getAll().subscribe(
-      products => {this.products = products
-      this.loading = false
-      })
+    this.products$ = this.productsService.getAll().pipe(
+      tap(() => this.loading = false))
+    // this.productsService.getAll().subscribe(
+    //   products => {this.products = products
+    //   this.loading = false
+    //   })
   }
 
   toggleCards()  {
