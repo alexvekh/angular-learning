@@ -43,6 +43,8 @@ export class AppComponent implements OnInit {
   ]
 
   products: IProduct[] = [];
+products$: Observable<undefined>|Subscribable<undefined>|Promise<undefined>;
+loading: any;
 
   constructor(private productsService: ProductsService) {
   }
