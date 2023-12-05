@@ -2,17 +2,31 @@
   <app-global-error></app-global-error>
   <h1>Hello Angular</h1>
 
-  <hr />
-  <button (click)="toggleCards()">Toggle Cards</button>
 
-  <hr />
-  <div *ngIf="toggle; else noCards">
-    <app-form></app-form>
 
-    <p *ngIf="loading" class="load">Loading...</p> 
-    <app-product *ngFor="let product of products$ | async" [product]="product" >
-    </app-product>
+  <!-- <app-form [(ngModel)]="term"></app-form> -->
 
+      <input 
+      type="text" 
+      class="input" 
+      placeholder="Filter products..."
+      [(ngModel)]="term"
+    >
+
+
+    
+      <p *ngIf="loading" class="load">Loading...</p> 
+    <div *ngIf="products$ | async as products">
+      <app-product *ngFor="let product of products | filterProducts:term; let i = index" [product]="product" >
+      </app-product>
+
+    </div>
+
+    <hr />
+    <button (click)="toggleCards()">Toggle Cards</button>
+  
+    <hr />
+    <div *ngIf="toggle; else noCards">
     <app-card
       *ngFor="let iterCard of cards; let idx = index"
       [card]="iterCard"
