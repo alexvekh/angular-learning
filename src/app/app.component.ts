@@ -11,6 +11,8 @@ import { IProduct } from './models/product';
 import { ProductsService } from './services/products.service';
 import { Observable, tap } from 'rxjs';
 import { GlobalErrorComponent } from './global-error/global-error.component';
+import { FormsModule } from '@angular/forms';
+import { FilterProductsPipe } from './pipes/filter-products.pipe';
 
 
 export interface Card {
@@ -29,6 +31,8 @@ export interface Card {
     FormComponent, 
     HttpClientModule,
     GlobalErrorComponent,
+    FormsModule,
+    FilterProductsPipe,
   ],
   providers: [ProductsService],
   templateUrl: './app.component.html',
@@ -40,6 +44,8 @@ export class AppComponent implements OnInit {
  
   title = 'angular-lerning';
   toggle = true
+  term: string = ''
+
   cards: Card[] = [
     {title: "First Card", text: "This is card number 1"},
     {title: "Second Card", text: "This is card #2"},
@@ -48,7 +54,8 @@ export class AppComponent implements OnInit {
 
   //products: IProduct[] = [];
   loading = false
-  products$!: Observable<IProduct[]>;
+  products$!: Observable<IProduct[]>
+
 
   constructor(private productsService: ProductsService) {  }
 

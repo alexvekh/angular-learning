@@ -7,10 +7,11 @@ import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
-import { products as data } from './data/products';
 import { ProductsService } from './services/products.service';
 import { Observable, Subscribable } from 'rxjs';
 import { GlobalErrorComponent } from "./global-error/global-error.component";
+import { FormsModule } from '@angular/forms';
+import { FilterProductsPipe } from "./pipes/filter-products.pipe";
 
 
 export interface Card {
@@ -30,7 +31,9 @@ export interface Card {
         ProductComponent,
         FormComponent,
         HttpClientModule,
-        GlobalErrorComponent
+        GlobalErrorComponent,
+        FormsModule,
+        FilterProductsPipe
     ]
 })
 
@@ -47,7 +50,8 @@ export class AppComponent implements OnInit {
 
   products: IProduct[] = [];
   products$!: Observable<undefined> | Subscribable<undefined> | Promise<undefined>;
-loading: any;
+  loading: any;
+  term: any;
 
   constructor(private productsService: ProductsService) {
   }
