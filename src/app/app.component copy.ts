@@ -9,6 +9,8 @@ import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
 import { products as data } from './data/products';
 import { ProductsService } from './services/products.service';
+import { Observable, Subscribable } from 'rxjs';
+import { GlobalErrorComponent } from "./global-error/global-error.component";
 
 
 export interface Card {
@@ -17,18 +19,19 @@ export interface Card {
 }
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule, 
-    RouterOutlet, 
-    CardComponent, 
-    ProductComponent,
-    FormComponent, 
-    HttpClientModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        CardComponent,
+        ProductComponent,
+        FormComponent,
+        HttpClientModule,
+        GlobalErrorComponent
+    ]
 })
 
 export class AppComponent implements OnInit {
@@ -43,7 +46,7 @@ export class AppComponent implements OnInit {
   ]
 
   products: IProduct[] = [];
-products$: Observable<undefined>|Subscribable<undefined>|Promise<undefined>;
+  products$!: Observable<undefined> | Subscribable<undefined> | Promise<undefined>;
 loading: any;
 
   constructor(private productsService: ProductsService) {

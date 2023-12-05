@@ -6,9 +6,11 @@ import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
+
 //import { products as data } from './data/products';
 import { ProductsService } from './services/products.service';
 import { Observable, tap } from 'rxjs';
+import { GlobalErrorComponent } from './global-error/global-error.component';
 
 
 export interface Card {
@@ -26,6 +28,7 @@ export interface Card {
     ProductComponent,
     FormComponent, 
     HttpClientModule,
+    GlobalErrorComponent,
   ],
   providers: [ProductsService],
   templateUrl: './app.component.html',

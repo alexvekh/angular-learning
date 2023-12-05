@@ -1,0 +1,23 @@
+.global-error{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 0, 0);
+  color: white;
+  font-weight: 600;
+  position: relative;
+}
+
+.x {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(209, 0, 0);
+  border: none
+
+}
