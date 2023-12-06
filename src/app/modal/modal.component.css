@@ -1,0 +1,26 @@
+.dark {
+  background-color: rgba(0, 0, 0, 0.5); /* bg-black/50 */
+  position: fixed; /* fixed */
+  top: 0; /* top-0 */
+  right: 0; /* right-0 */
+  left: 0; /* left-0 */
+  bottom: 0; /* bottom-0 */
+}
+
+.window {
+  width: 500px; /* w-[500px] */
+  position: absolute; /* absolute */
+  top: 3.5rem; /* top-15 */
+  padding: 1.5rem; /* p-6 */
+  background-color: #fff; /* bg-white */
+  border-radius: 3px;
+  left: 50%; /* left-1/2 */
+  transform: translateX(-50%); /* -translate-x-1/2 */
+} 
+
+.title {
+  text-align: center; /* text-center */
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-size: 1.125rem; /* text-lg */
+
+}
