@@ -1,0 +1,27 @@
+input {
+  border: 1px solid #949494; /* border */
+  border-radius: 3px;
+  width: 93%; /* w-full */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  margin-bottom: 0; /* mb-2 */
+}
+
+button {
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  background-color: #2267c3; /* bg-blue-600 */
+  border-radius: 3px;
+  color: #ffffff; /* text-white */
+}
+
+p {
+  color: rgb(219, 1, 1);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 1rem;
+}

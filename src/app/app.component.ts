@@ -13,6 +13,8 @@ import { Observable, tap } from 'rxjs';
 import { GlobalErrorComponent } from './global-error/global-error.component';
 import { FormsModule } from '@angular/forms';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { ModalComponent } from './modal/modal.component';
+import { CreateProductComponent } from './create-product/create-product.component';
 
 
 export interface Card {
@@ -33,6 +35,8 @@ export interface Card {
     GlobalErrorComponent,
     FormsModule,
     FilterProductsPipe,
+    ModalComponent,
+    CreateProductComponent,
   ],
   providers: [ProductsService],
   templateUrl: './app.component.html',

@@ -12,6 +12,8 @@ import { Observable, Subscribable } from 'rxjs';
 import { GlobalErrorComponent } from "./global-error/global-error.component";
 import { FormsModule } from '@angular/forms';
 import { FilterProductsPipe } from "./pipes/filter-products.pipe";
+import { CreateProductComponent } from "./create-product/create-product.component";
+import { ModalComponent } from "./modal/modal.component";
 
 
 export interface Card {
@@ -33,7 +35,9 @@ export interface Card {
         HttpClientModule,
         GlobalErrorComponent,
         FormsModule,
-        FilterProductsPipe
+        FilterProductsPipe,
+        CreateProductComponent,
+        ModalComponent
     ]
 })
 
