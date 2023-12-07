@@ -6,7 +6,7 @@ input {
   padding-bottom: 0.5rem; /* py-2 */
   padding-left: 1rem; /* px-4 */
   padding-right: 1rem; /* px-4 */
-  margin-bottom: 0; /* mb-2 */
+  margin-bottom: 1rem; /* mb-2 */
 }
 
 button {
@@ -23,5 +23,6 @@ p {
   color: rgb(219, 1, 1);
   font-weight: 600;
   font-size: 15px;
+  margin-top: -0.25rem;
   margin-bottom: 1rem;
 }

@@ -22,9 +22,11 @@
 
     </div>
 
-    <app-modal title="Create New roduct">
+    <app-modal *ngIf="modalService.isVisible$ | async" title="Create New roduct">
       <app-create-product></app-create-product>
     </app-modal>
+
+    <button class="add-button" (click)="modalService.open()">+</button>
 
     <hr />
     <button (click)="toggleCards()">Toggle Cards</button>

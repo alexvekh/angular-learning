@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
 import { ModalComponent } from './modal/modal.component';
 import { CreateProductComponent } from './create-product/create-product.component';
+import { ModalService } from './services/modal.service';
 
 
 export interface Card {
@@ -61,7 +62,10 @@ export class AppComponent implements OnInit {
   products$!: Observable<IProduct[]>
 
 
-  constructor(private productsService: ProductsService) {  }
+  constructor(
+    private productsService: ProductsService,
+    public modalService: ModalService
+  ) {  }
 
   ngOnInit(): void {
     this.loading = true

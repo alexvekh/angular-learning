@@ -3,9 +3,10 @@
   type="text" 
   placeholder="Product name" 
   formControlName="title"
+  appFocus
 >
 
-<p>error</p>
+<p *ngIf="title.errors?.['minlength'] && title.touched">Please, fill title field with min 6 length. (Now {{title.value.length}})</p>
 
 <button type="submit">Create</button>
 

@@ -21,3 +21,20 @@ h1 {
   padding-right: 1rem; /* px-4 */
   width: 100%; /* w-full */
 }
+
+.add-button {
+  // rounded-full bg-red-700 text-white fixed right-5 bottom-5 py-2 px-4
+  border-radius: 20px; /* rounded-full */
+  background-color: #c53030; /* bg-red-700 */
+  font-size: 20px;
+  color: #ffffff; /* text-white */
+  position: fixed; /* fixed */
+  right: 1.25rem; /* right-5 */
+  bottom: 1.25rem; /* bottom-5 */
+  padding: 7px 12px;
+  // padding-top: 0.5rem; /* py-2 */
+  // padding-bottom: 0.5rem; /* py-2 */
+  // padding-left: 1rem; /* px-4 */
+  // padding-right: 1rem; /* px-4 */
+
+}

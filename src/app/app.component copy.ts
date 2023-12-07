@@ -56,6 +56,7 @@ export class AppComponent implements OnInit {
   products$!: Observable<undefined> | Subscribable<undefined> | Promise<undefined>;
   loading: any;
   term: any;
+modalService: any;
 
   constructor(private productsService: ProductsService) {
   }
