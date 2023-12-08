@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
   term: any;
 modalService: any;
 
-  constructor(private productsService: ProductsService) {
+  constructor(public productsService: ProductsService) {
   }
 
   ngOnInit(): void {
