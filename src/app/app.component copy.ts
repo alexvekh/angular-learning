@@ -2,18 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
-import { CardComponent } from './card/card.component';
-import { FormComponent } from './form/form.component';
+import { CardComponent } from './components/card/card.component';
+import { FormComponent } from './components/form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { IProduct } from './models/product';
 import { ProductsService } from './services/products.service';
 import { Observable, Subscribable } from 'rxjs';
-import { GlobalErrorComponent } from "./global-error/global-error.component";
+import { GlobalErrorComponent } from "./components/global-error/global-error.component";
 import { FormsModule } from '@angular/forms';
 import { FilterProductsPipe } from "./pipes/filter-products.pipe";
-import { CreateProductComponent } from "./create-product/create-product.component";
-import { ModalComponent } from "./modal/modal.component";
+import { CreateProductComponent } from "./components/create-product/create-product.component";
+import { ModalComponent } from "./components/modal/modal.component";
+import { NavigationComponent } from "./components/navigation/navigation.component";
 
 
 export interface Card {
@@ -37,7 +38,8 @@ export interface Card {
         FormsModule,
         FilterProductsPipe,
         CreateProductComponent,
-        ModalComponent
+        ModalComponent,
+        NavigationComponent
     ]
 })
 

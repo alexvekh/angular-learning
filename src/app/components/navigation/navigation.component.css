@@ -1,0 +1,22 @@
+.nav {
+  /* absolute top-0 right-0 left-0 h-[50px] flex justify-beetwen items-center text-white bg-gray-500; */
+    position: absolute; /* absolute */
+    top: 0; /* top-0 */
+    right: 0; /* right-0 */
+    left: 0; /* left-0 */
+    height: 50px; /* h-[50px] */
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+    color: #ffffff; /* text-white */
+    background-color: #718096; /* bg-gray-500 */
+    padding: 0 20px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 2rem;
+}

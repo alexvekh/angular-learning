@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { NgStyle } from "@angular/common";
 import { NgClass } from "@angular/common";
-import { Card } from "../app.component";
+
 import { DatePipe } from "@angular/common";
+import { Card } from "../../pages/cards-page/cards-page.component";
 //import { registerLocaleData } from "@angular/common";
 //import localeUa from '@angular/common/locales/ru-UA'
 //registerLocaleData(localeUa, 'ua')

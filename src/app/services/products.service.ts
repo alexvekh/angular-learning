@@ -36,7 +36,10 @@ export class ProductsService {
   create(product: IProduct): Observable<IProduct>{
     return this.http.post<IProduct>('https://fakestoreapi.com/products', product)
       .pipe(
-        tap(prod => this.products.push(prod) )
+        tap(prod => {
+          this.products.push(prod)
+          console.log(this.products)
+         })
       )
 
   }
