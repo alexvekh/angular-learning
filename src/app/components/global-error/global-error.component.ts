@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ErrorService } from '../services/error.service';
+import { ErrorService } from '../../services/error.service';
 
 @Component({
   selector: 'app-global-error',

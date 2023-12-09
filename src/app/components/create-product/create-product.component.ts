@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FocusDirective } from '../directives/focus.directive';
-import { ProductsService } from '../services/products.service';
-import { ModalService } from '../services/modal.service';
+import { FocusDirective } from '../../directives/focus.directive';
+import { ProductsService } from '../../services/products.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-create-product',
@@ -44,7 +44,7 @@ export class CreateProductComponent implements OnInit{
       image: 'https://i.pravatar.cc',
       category: 'electronic',
       rating: {
-        rate: 42,
+        rate: 4.8,
         count: 1
       }
     }).subscribe(() => {
