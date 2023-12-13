@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalService } from '../../services/modal.service';
 import { ProductsService } from '../../services/products.service';
-import { ProductComponent } from "../../product/product.component";
+import { ProductComponent } from "../../components/product/product.component";
 import { ModalComponent } from "../../components/modal/modal.component";
 import { CreateProductComponent } from "../../components/create-product/create-product.component";
 import { Observable, tap } from 'rxjs';

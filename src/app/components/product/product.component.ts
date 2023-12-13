@@ -2,7 +2,7 @@ import { Component, Input } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { CommonModule, NgStyle } from "@angular/common";
 import { NgClass } from "@angular/common";
-import { IProduct } from "../models/product";
+import { IProduct } from "../../models/product";
 import { CurrencyPipe } from "@angular/common";
 //import { registerLocaleData } from "@angular/common";
 //import localeUa from '@angular/common/locales/ru-UA'

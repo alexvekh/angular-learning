@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
 import { FormComponent } from './components/form/form.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './components/product/product.component';
 import { IProduct } from './models/product';
 import { ProductsService } from './services/products.service';
 import { Observable, Subscribable } from 'rxjs';

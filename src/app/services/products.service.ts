@@ -24,7 +24,7 @@ export class ProductsService {
       params: new HttpParams({
         //fromString: 'limit=5'   
         //fromObject: {limit: 5}
-      }).append('limit', 5)   // variants limit
+      }).append('limit', 10)   // variants limit
     }).pipe(
       delay(200), // delay 2 sec
       retry(2),
